@@ -5,10 +5,11 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Historial {
-  private Date fecha;
-    private String tipoPartida;
-    private String resultado;
-    private ArrayList<String> eventos;
+    public Date fecha;
+    public String tipoPartida;
+    public String resultado;
+    public ArrayList<String> eventos;
+  
     private Scanner scanner = new Scanner(System.in);
 
     public String getResumen() {
@@ -38,7 +39,7 @@ public void mostrarHistorialResumido() {
 
 public void eliminarPartida() {
         System.out.println("¿Qué partida desea eliminar?");
- int opcion = scanner.nextInt();
+             int opcion = scanner.nextInt();
   historial.remove(opcion - 1);
         System.out.println("Partida eliminada del historial.");
 }
