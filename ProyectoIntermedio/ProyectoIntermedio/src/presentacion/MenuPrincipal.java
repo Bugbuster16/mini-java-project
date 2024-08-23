@@ -13,6 +13,7 @@ public class MenuPrincipal {
 		System.out.println("|    1. Crear Personaje    |");
 		System.out.println("|     2. Jugar Partida     |");
 		System.out.println("| 3. Historial de Partidas |");
+		System.out.println("|         4. Salir          |");
 		System.out.println("|==========================|");
 		int op = entrada.nextInt();
 
@@ -46,6 +47,10 @@ public class MenuPrincipal {
               			  break;
    			     }
                 break;
+	  case 4:
+                     System.out.println("¡Gracias por jugar!");
+				  continuar = false;
+				  break;
             default:
                 System.out.println("Opción no válida");
                 break;
