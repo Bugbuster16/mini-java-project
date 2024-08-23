@@ -8,7 +8,7 @@ public class Historial {
     private Scanner scanner = new Scanner(System.in);
 
     public void agregarPartida(Combate combate) {
-        historial.add(partida);
+        historial.add(combate);
     }
 
     public void mostrarHistorialResumido() {
