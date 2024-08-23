@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Historial {
-    private ArrayList<Partida> historial;
+    private ArrayList<Combate> historial;
     private Scanner scanner = new Scanner(System.in);
 
-    public void agregarPartida(Partida partida) {
+    public void agregarPartida(Combate combate) {
         historial.add(partida);
     }
 
