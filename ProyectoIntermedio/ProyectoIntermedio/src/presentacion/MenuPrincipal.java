@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class MenuPrincipal {
 	Scanner entrada = new Scanner (System.in);
-	
+	private boolean continuar=true;
 	public void mostrarMenu() {
+		while (continuar) {
 		System.out.println("|==========================|");
 		System.out.println("|=>      Bienvenido      <=|");
 		System.out.println("|==========================|");
@@ -25,7 +26,8 @@ public class MenuPrincipal {
                 //pendiente
                 break;
             case 3:
-                mostrarHistorialResumido();
+            	Historial historial = new Historial();
+                historial.mostrarHistorialResumido();
 						System.out.println("|==========================|");
 						System.out.println("|    1.  Ver a detalle     |");
 						System.out.println("|    2. Eliminar partida   |");
@@ -34,10 +36,10 @@ public class MenuPrincipal {
 				  int opcc = entrada.nextInt();
 				  		  switch (opcc) {
            			 case 1:
-               			 mostrarDetallePartida();
+               			 historial.mostrarDetallePartida();
                 			break;
           			  case 2:
-               			 eliminarPartida();
+               			 historial.eliminarPartida();
               			  break;
          			   case 3:
            			     System.out.println("Volviendo al menú...");		  
@@ -49,11 +51,12 @@ public class MenuPrincipal {
                 break;
 	  case 4:
                      System.out.println("¡Gracias por jugar!");
-				  continuar = false;
+				  continuar = !continuar;
 				  break;
             default:
                 System.out.println("Opción no válida");
                 break;
         }
 	}
+}
 }
