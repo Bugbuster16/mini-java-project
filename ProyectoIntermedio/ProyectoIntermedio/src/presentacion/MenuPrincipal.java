@@ -1,5 +1,6 @@
 package presentacion;
 
+import logica.*;
 import java.util.Scanner;
 
 public class MenuPrincipal {
