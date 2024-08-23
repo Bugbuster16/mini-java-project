@@ -1,5 +1,5 @@
 package logica;
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 
 public abstract class Combate {
