@@ -4,6 +4,7 @@ import logica.*;
 import java.util.Scanner;
 
 public class MenuPrincipal {
+	Historial historial = new Historial();
 	Scanner entrada = new Scanner (System.in);
 	private boolean continuar=true;
 	public void mostrarMenu() {
@@ -26,30 +27,9 @@ public class MenuPrincipal {
                 //pendiente
                 break;
             case 3:
-            	Historial historial = new Historial();
-                historial.mostrarHistorialResumido();
-						System.out.println("|==========================|");
-						System.out.println("|    1.  Ver a detalle     |");
-						System.out.println("|    2. Eliminar partida   |");
-						System.out.println("|    3. Salir              |");
-						System.out.println("|==========================|");
-				  int opcc = entrada.nextInt();
-				  		  switch (opcc) {
-           			 case 1:
-               			 historial.mostrarDetallePartida();
-                			break;
-          			  case 2:
-               			 historial.eliminarPartida();
-              			  break;
-         			   case 3:
-           			     System.out.println("Volviendo al menú...");		  
-			                break;
-           			 default:
-               			 System.out.println("Opción no válida");
-              			  break;
-   			     }
+                historial.mostrarHistorialResumido();		
                 break;
-	  case 4:
+            case 4:
                      System.out.println("¡Gracias por jugar!");
 				  continuar = !continuar;
 				  break;
