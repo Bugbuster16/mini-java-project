@@ -1,7 +1,6 @@
 package logica;
 import java.util.Date;
 import java.util.ArrayList;
-
 public abstract class Combate {
 	private Personaje jugador1;
 	private Personaje jugador2;
@@ -75,4 +74,19 @@ public abstract class Combate {
 	public void setJugador2(Personaje jugador2) {
 		this.jugador2 = jugador2;
 	}
+	
+    public String getResumen() {
+        return fecha + " - " + tipoPartida + " - " + resultado;
+    }
+
+    public void mostrarDetalle() {
+        System.out.println("Fecha: " + fecha);
+        System.out.println("Tipo de Partida: " + tipoPartida);
+        System.out.println("Resultado: " + resultado);
+        System.out.println("Eventos:");
+        for (String evento : eventos) {
+            System.out.println(evento);
+        }
+    }
+
 }
