@@ -1,31 +1,46 @@
 package logica;
+
 import java.util.Date;
+import java.util.Scanner;
+import java.util.Random;
 import java.util.ArrayList;
+import java.util.SimpleDateFormat;
+
 public abstract class Combate {
 	private Personaje jugador1;
 	private Personaje jugador2;
 	private Date fecha;
-    private String tipoPartida;
-    private String resultado;
-    private ArrayList<String> eventos;
+   	private String tipoPartida;
+    	private String ganador;
+    	private ArrayList<String> eventos;
     
     Combate() {
     	jugador1 = null;
     	jugador2 = null;
     	fecha = null;
     	tipoPartida = "Defecto";
-    	resultado = "Defecto";
-    	eventos = null;
+    	ganador = "Empate";
+    	eventos = new ArrayList<String>();
     }
 
-    Combate(Date fecha, String tipoPartida, String resultado, ArrayList<String> eventos, Personaje jugador1, Personaje jugador2) {
-    	this.jugador1 = jugador1;
-    	this.jugador2 = jugador2;
-    	this.fecha = fecha;
+    Combate(String tipoPartida) {
         this.tipoPartida = tipoPartida;
-        this.resultado = resultado;
-        this.eventos = new ArrayList<>(eventos);
+        this.eventos = new ArrayList<String>(eventos);
     }
+	public String asignarNombrePersonaje(Scanner entrada){
+		System.out.println("|==> Asignar nombre de personaje <==|");
+		getEventos().add("|==> Asignar nombre de personaje <==|");
+		String nombrePersonaje = entrada.next();
+		return nombrePersonaje;
+	}
+	
+	public double asignarPuntosPersonaje(String atributoNombre, Scanner entrada){
+		System.out.println("|=> Asignar pintos libres a " + atributoNombre + " <=|");
+		getEventos().add(String.valueOf(pla));
+		System.out.println("| " + pla + " puntos libres han sido asignados a " + atributoNombre + " |");
+		return pla;
+	}
+	
 
 	public Date getFecha() {
 		return fecha;
